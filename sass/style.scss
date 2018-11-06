@@ -769,7 +769,8 @@ body {
    		border-bottom: solid 5px $grey;
 	}
 	@media #{$smallphone} {
-   		display: none;
+   		flex-wrap: wrap;
+   		max-height: 100%;
 	}
 	.skills_cell {
 		width: 25%;
@@ -778,6 +779,10 @@ body {
    			position: static;
 		}
 		@media #{$phone} {
+   			width: 100%;
+   			position: static;
+		}
+		@media #{$smallphone} {
    			width: 100%;
    			position: static;
 		}
@@ -799,12 +804,20 @@ body {
 	   			text-align: center;
 	   			width: 100%;
 	   			bottom: 0;
+	   			height: 0;
 			}
 			@media #{$phone} {
 				left: 0;
 		   		text-align: center;
 	   			width: 100%;
+	   			bottom: -50px;
+			}
+			@media #{$smallphone} {
+				left: 0;
+		   		text-align: center;
+	   			width: 100%;
 	   			bottom: 0;
+	   			height: 0;
 			}
 			.skills_link {
 				color: $pink;
@@ -831,7 +844,16 @@ body {
 					padding: 20px;
 				}
 				@media #{$phone} {
-					font-size: 50px;
+					font-size: 70px;
+					padding: 20px;
+					background-color: $pink;
+					color: $white;
+				}
+				@media #{$smallphone} {
+					font-size: 70px;
+					padding: 20px;
+					background-color: $pink;
+					color: $white;
 				}
 			}
 			.skills_line {
@@ -854,13 +876,21 @@ body {
 		@media #{$smartphone} {
 	   		background-image: none;
 	   		width: 100%;
-			height: 40%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 30%;
+		}
+		@media #{$phone} {
+			margin-top: 40px;
+	   		background-image: none;
+	   		width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
-		@media #{$phone} {
-			margin-top: 40px;
+		@media #{$smallphone} {
+			margin-bottom: 100px;
 	   		background-image: none;
 	   		width: 100%;
 			display: flex;
@@ -873,7 +903,7 @@ body {
 		width: 75%;
 		@media #{$tablet} {
 			flex-wrap: wrap;
-			width: 90%;
+			width: 100%;
 			align-items: center;
 		}
 		@media #{$smartphone} {
@@ -886,12 +916,23 @@ body {
 		   	width: 100%;
 		   	height: 80%;
 		}
+		@media #{$smallphone} {	
+			flex-wrap: wrap;
+		   	width: 100%;
+		   	height: 100%;
+		}
 		.skills_cell_three {
 			width: 100%;
 			background-color: $white;
 			.two_row {
 				display: flex;
 				height: 50%;
+				@media #{$phone} {
+					height: 65%;
+				}
+				@media #{$smallphone} {
+					height: 60%;
+				}
 				.skills_know {
 					width: 100%;
 					background-color: $white;
@@ -902,19 +943,38 @@ body {
 						font-size: 5vmin;
 						color: $grey;
 						font-weight: 800;
-						padding: 20px;
 						margin-top: 10px;
+						padding: 20px;
 						@media #{$big} {
 				   			margin-left: 30px;
 						}
 						@media #{$tablet} {
-				   			font-size: 34px;	
+				   			margin: 0 auto;
+							width: 100%;
+				   			font-size: 44px;
+				   			background-color: $grey;
+				   			color: $white;	
 						}
 						@media #{$smartphone} {
-				   			font-size: 30px;   			
+				   			margin: 0 auto;
+							width: 100%;
+				   			font-size: 30px;
+				   			background-color: $grey;
+				   			color: $white;  			
 						}
 						@media #{$phone} {
+				   			margin: 0 auto;
+							width: 100%;
+				   			font-size: 40px;
+				   			background-color: $grey;
+				   			color: $white;
+						}
+						@media #{$smallphone} {
+							margin: 0 auto;
+							width: 100%;
 				   			font-size: 30px;
+				   			background-color: $grey;
+				   			color: $white;
 						}
 					}
 					.icon_skills {
@@ -930,10 +990,34 @@ body {
 				   				font-size: 50px;
 							}
 							@media #{$tablet} {
-				   				font-size: 42px;
+				   				font-size: 60px;
+							}
+							@media #{$smartphone} {
+								padding: 30px;
+				   				font-size: 60px;
+				   				overflow: auto;
+				   				justify-content: center;
+				   			}
+							@media #{$phone} {
+								padding: 30px;
+				   				font-size: 60px;
+				   				overflow: auto;
+				   			}
+							@media #{$smallphone} {
+								padding: 30px;
+				   				font-size: 50px;
+				   				overflow: auto;
 							}
 						}
 					}
+				}
+			}
+			.second_row {
+				@media #{$phone} {
+					height: 35%;
+				}
+				@media #{$smallphone} {
+					height: 40%;
 				}
 			}
 		}
@@ -1222,7 +1306,7 @@ body {
    		flex-wrap: wrap;
 	}
 	.contact_cell_one {
-		width: 25%;
+		width: 20%;
 		background-image: url('../images/line_light.jpg');
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -1271,6 +1355,9 @@ body {
 				left: 0;
 		   		text-align: center;
 	   			width: 100%;
+	   			display: flex;
+	   			justify-content: center;
+	   			position: relative;
 			}
 			.contact_number {
 				color: $pink;
@@ -1281,18 +1368,29 @@ body {
 				font-size: 7vmin;
 				font-family: $font;
 				@media #{$smartphone} {
-					font-size: 70px;
-					background-color: $grey;
+					width: 100%;
+					font-size: 120px;
+					background-color: $pink;
 					padding: 20px;
 					color: $white;
 				}
 				@media #{$phone} {
-					font-size: 70px;
-					color: $grey;
+					width: 100%;
+					font-size: 120px;
+					background-color: $pink;
+					padding: 20px;
+					color: $white;
+					position: absolute;
+					bottom: -100px;
 				}
 				@media #{$smallphone} {
+					width: 100%;
 					font-size: 70px;
-					color: $grey;
+					background-color: $pink;
+					padding: 20px;
+					color: $white;
+					position: absolute;
+					bottom: -100px;
 				}
 			}
 			.contact_line {
@@ -1313,7 +1411,7 @@ body {
 	}
 	.contact_box {
 		display: flex;
-		width: 75%;
+		width: 80%;
 		@media #{$tablet} {
 	   		flex-wrap: wrap;
 	   		position: relative;
@@ -1346,11 +1444,9 @@ body {
 			}
 			@media #{$phone} {	
 			   	width: 100%;
-			   	height: 50px;
 			}
 			@media #{$smallphone} {
 			   	width: 100%;
-			   	height: 50px;
 			}
 			.contact_content {
 				text-align: center;
@@ -1365,10 +1461,10 @@ body {
 					line-height: 60px;
 					width: 250px;
 					margin: 0 auto;
-					margin-top: 13px;
 					@media #{$tablet} {
 						width: 100%;
-						font-size: 40px;
+						font-size: 50px;
+						padding: 10px;
 					}
 					@media #{$smartphone} {
 				   		width: 100%;
@@ -1377,12 +1473,12 @@ body {
 					}
 					@media #{$phone} {	
 					   	width: 100%;
-					   	height: 50px;
+					   	height: 30px;
 					   	margin: 0 auto;
 					}
 					@media #{$smallphone} {
-					   	width: 100%;
-					   	height: 50px;
+					   width: 100%;
+					   	height: 30px;
 					   	margin: 0 auto;
 					}
 				}
@@ -1416,7 +1512,7 @@ body {
 	   				flex-wrap: wrap;
 				}
 				.tree_cell {
-					border-top: 1px solid #000000;
+					border-top: 1px solid $grey;
 					width: 50%;
 					display: flex;
 					align-items: center;
@@ -1472,14 +1568,14 @@ body {
 .tree_cell_two {
 	background-color: $grey;
 	@media #{$smallphone} {
-		border: 1px solid #000000;
+		border-top: 1px solid $grey;
 	}
 }
 
 .tree_cell_three {
 	background-color: $grey;
 	@media #{$smallphone} {
-		border: 1px solid #000000;
+		border-top: 1px solid $white;
 	}
 }
 
@@ -1489,7 +1585,7 @@ body {
    		border-right: 1px solid #000000;
 	}
 	@media #{$smallphone} {
-		border: 1px solid #000000;
+		border-top: 1px solid $grey;
 	}
 }
 
