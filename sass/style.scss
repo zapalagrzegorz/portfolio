@@ -12,8 +12,8 @@ $big: "(max-width: 1400px)";
 $desktop: "(min-width: 992px) and (max-width: 1200px)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $smartphone: "(min-width: 577px) and (max-width: 768px)";
-$phone: "(min-width: 451px) and (max-width: 576px)";
-$smallphone: "(min-width: 320px) and (max-width: 450px)";
+$phone: "(max-width: 576px)";
+$smallphone: "(max-width: 450px)";
 
 
 * {
@@ -60,8 +60,11 @@ body {
 	}
 
 	.header_navigation {
+		display: -ms-flexbox;
 		display: flex;
+		-ms-flex-align: center;
 		align-items: center;
+		-ms-flex-pack: justify;
 		justify-content: space-between;
 		padding-top: 30px;
 		color: $white;
@@ -85,8 +88,10 @@ body {
 			display: none;
 		}
 		.nav_list {
+			display: -ms-flexbox;
 			display: flex;
 			@media #{$tablet} {
+				display: -ms-flexbox;
 				display: flex;
 				flex-direction: column;
 				background-color: $white;
@@ -191,6 +196,9 @@ body {
     		left: 0;
     		right: 0;
     		margin: auto;
+    		@media #{$phone} {
+    			display: none;
+    		}
 		}
 	}
 	.hero_title {
@@ -201,7 +209,7 @@ body {
 		margin: 0 auto;
 		margin-top: 250px;
 		@media #{$phone} {
-   			font-size: 5vmin;
+   			font-size: 50px;
 		}
 		@media #{$smallphone} {
    			font-size: 35px;
@@ -213,6 +221,12 @@ body {
 		margin: 0 auto;
 		margin-left: 20px;
 		font-family: $font;
+		@media #{$phone} {
+   			font-size: 30px;
+		}
+		@media #{$smallphone} {
+   			font-size: 20px;
+		}
 	}
 }
 
@@ -327,11 +341,31 @@ body {
 	img {
 		width: 100%;
 	}
+	@media #{$phone} {
+   		width: 100%;
+	}
+	@media #{$smallphone} {
+		border: solid 2px red;
+   		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 .about_cell_three {
 	width: 50%;
 	display: flex;
 	align-items: center;
+	@media #{$phone} {
+   		width: 100%;
+	}
+	@media #{$smallphone} {
+		border: solid 2px red;
+   		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 
 .about_title {
