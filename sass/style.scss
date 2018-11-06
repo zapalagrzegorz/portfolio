@@ -1063,25 +1063,22 @@ body {
 			}
 		}
 		.row { 
-	    	border: solid 2px red;
-	    	max-width: 100%;
-width: 1200px;
+	    	width: 100%;
 			height: 85%;
 			display: flex;
 			flex-wrap: wrap;
-			justify-content: space-between;
+			justify-content: space-around;
 			overflow: auto;
 	    	.projects_col {
 	    		width: 320px;
 	    		height: 300px ;
 			  	margin: 10px;
-			  	border: solid 2px blue;
 			  	@media #{$desktop} {
-	   				width: 240px;
+	   				width: 260px;
 	   				height: 220px;
 				}
 				@media #{$tablet} {
-	   				width: 220px;
+	   				width: 260px;
 	   				height: 220px;
 				}
 			  	.projects_box {
