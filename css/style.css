@@ -970,36 +970,31 @@ body {
           .projects .project_cell_two .my-buttons .project-btn {
             width: 25%;
             flex-wrap: wrap; } }
-        @media (max-width: 576px) {
-          .projects .project_cell_two .my-buttons .project-btn {
-            width: 25%;
-            flex-wrap: wrap; } }
         .projects .project_cell_two .my-buttons .project-btn:hover {
           border-bottom: solid 5px #BB8181; }
         .projects .project_cell_two .my-buttons .project-btn:focus {
           border-bottom: solid 5px #BB8181;
           background-color: #BB8181; }
     .projects .project_cell_two .row {
+      border: solid 2px red;
       width: 100%;
       height: 85%;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      align-items: stretch;
-      margin: 0;
-      padding: 0;
       overflow: auto; }
       .projects .project_cell_two .row .projects_col {
         width: 320px;
         height: 300px;
-        margin: 10px; }
+        margin: 10px;
+        flex-wrap: wrap; }
         @media (min-width: 992px) and (max-width: 1200px) {
           .projects .project_cell_two .row .projects_col {
-            width: 260px;
+            width: 240px;
             height: 220px; } }
         @media (min-width: 768px) and (max-width: 991px) {
           .projects .project_cell_two .row .projects_col {
-            width: 260px;
+            width: 220px;
             height: 220px; } }
         .projects .project_cell_two .row .projects_col .projects_box {
           border: solid 3px #808080;
@@ -1023,7 +1018,7 @@ body {
               padding: 2px; }
               @media (min-width: 992px) and (max-width: 1200px) {
                 .projects .project_cell_two .row .projects_col .projects_box .project_name .title {
-                  font-size: 10px; } }
+                  font-size: 30px; } }
               @media (min-width: 768px) and (max-width: 991px) {
                 .projects .project_cell_two .row .projects_col .projects_box .project_name .title {
                   font-size: 26px; } }

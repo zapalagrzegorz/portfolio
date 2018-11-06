@@ -1053,10 +1053,6 @@ body {
 					width: 25%;
 			   		flex-wrap: wrap;
 				}
-				@media #{$phone} {
-					width: 25%;
-			   		flex-wrap: wrap;
-				}
 				&:hover {
 	    			border-bottom: solid 5px $pink;
 				}
@@ -1068,25 +1064,24 @@ body {
 		}
 
     .row { 
+    	border: solid 2px red;
     	width: 100%;
 		height: 85%;
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		align-items: stretch;
-		margin: 0;
-		padding: 0;
 		overflow: auto;
     	.projects_col {
     		width: 320px;
     		height: 300px ;
 		  	margin: 10px;
+		  	flex-wrap: wrap;
 		  	@media #{$desktop} {
-   				width: 260px;
+   				width: 240px;
    				height: 220px;
 			}
 			@media #{$tablet} {
-   				width: 260px;
+   				width: 220px;
    				height: 220px;
 			}
 		  	.projects_box {
@@ -1110,7 +1105,7 @@ body {
 						color: $grey;
 						padding: 2px;
 						@media #{$desktop} {
-	 			 			font-size: 10px;
+	 			 			font-size: 30px;
 	 			 		}
 	 			 		@media #{$tablet} {
 	 			 			font-size: 26px;
