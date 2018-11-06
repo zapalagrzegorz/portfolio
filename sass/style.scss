@@ -1062,160 +1062,151 @@ body {
 				}
 			}
 		}
-
-    .row { 
-    	border: solid 2px red;
-    	width: 100%;
-		height: 85%;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		overflow: auto;
-    	.projects_col {
-    		width: 320px;
-    		height: 300px ;
-		  	margin: 10px;
-		  	flex-wrap: wrap;
-		  	@media #{$desktop} {
-   				width: 240px;
-   				height: 220px;
-			}
-			@media #{$tablet} {
-   				width: 220px;
-   				height: 220px;
-			}
-		  	.projects_box {
-		  		border: solid 3px $grey;
-  				width: 100%;
-  				height: 100%;
-  				position: relative;
- 			 	overflow: hidden;
- 			 	display: flex;
- 			 	flex-direction: column;
- 			 	.project_name {
- 			 		height: 30%;
- 			 		width: 100%;
- 			 		display: flex;
- 			 		border-top: solid 1px $grey;
-					.title {
-						width: 60%;
-						text-align: center;
-						font-family: $font;
-						font-size: 16px;
-						color: $grey;
-						padding: 2px;
-						@media #{$desktop} {
-	 			 			font-size: 30px;
-	 			 		}
-	 			 		@media #{$tablet} {
-	 			 			font-size: 26px;
-	 			 		}
-					}
- 			 		.link_web {
-	 			 		width: 20%;
- 			 			.projects_link {
-	 			 			width: 100%;
-	 			 			height: 100%;
-	 			 			display: flex;
-	 			 			align-items: center;
-	 			 			align-content: center;
-	 			 			justify-content: center;
-	 			 			text-decoration: none;
-	 			 			background-color: $grey;
-	 			 			transition: 1s;
-	 			 			&:hover {
-	 			 				background-color: $pink;
-	 			 			}
-	 			 			i {
-	 			 				font-size: 30px;
-	 			 				color: $white;
-	 			 				@media #{$desktop} {
-	 			 					font-size: 20px;
-	 			 				}
- 			 				}
- 			 			}
- 			 		}
- 			 		.link_repo {
-	 			 		text-align: center;
-	 			 		width: 20%;
- 			 			.projects_link {
-	 			 			width: 100%;
-	 			 			height: 100%;
-							text-decoration: none;
-	 			 			display: flex;
-	 			 			align-items: center;
-	 			 			align-content: center;
-	 			 			justify-content: center;
-							background-color: $grey;
-							border-left: solid 1px $white;
-							&:hover {
-	 			 				background-color: $pink;
-	 			 			}
-	 			 			i {
-	 			 				font-size: 30px;
-	 			 				color: $white;
-	 			 				@media #{$desktop} {
-	 			 					font-size: 20px;
+		.row { 
+	    	border: solid 2px red;
+	    	max-width: 100%;
+width: 1200px;
+			height: 85%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			overflow: auto;
+	    	.projects_col {
+	    		width: 320px;
+	    		height: 300px ;
+			  	margin: 10px;
+			  	border: solid 2px blue;
+			  	@media #{$desktop} {
+	   				width: 240px;
+	   				height: 220px;
+				}
+				@media #{$tablet} {
+	   				width: 220px;
+	   				height: 220px;
+				}
+			  	.projects_box {
+			  		border: solid 3px $grey;
+	  				width: 100%;
+	  				height: 100%;
+	  				position: relative;
+	 			 	overflow: hidden;
+	 			 	display: flex;
+	 			 	flex-direction: column;
+	 			 	.project_name {
+	 			 		height: 30%;
+	 			 		width: 100%;
+	 			 		display: flex;
+	 			 		border-top: solid 1px $grey;
+						.title {
+							width: 60%;
+							text-align: center;
+							font-family: $font;
+							font-size: 26px;
+							color: $grey;
+							padding: 2px;
+							@media #{$desktop} {
+		 			 			font-size: 30px;
+		 			 		}
+		 			 		@media #{$tablet} {
+		 			 			font-size: 26px;
+		 			 		}
+						}
+	 			 		.link_web {
+		 			 		width: 20%;
+	 			 			.projects_link {
+		 			 			width: 100%;
+		 			 			height: 100%;
+		 			 			display: flex;
+		 			 			align-items: center;
+		 			 			align-content: center;
+		 			 			justify-content: center;
+		 			 			text-decoration: none;
+		 			 			background-color: $grey;
+		 			 			transition: 1s;
+		 			 			&:hover {
+		 			 				background-color: $pink;
+		 			 			}
+		 			 			i {
+		 			 				font-size: 30px;
+		 			 				color: $white;
+		 			 				@media #{$desktop} {
+		 			 					font-size: 20px;
+		 			 				}
 	 			 				}
 	 			 			}
- 			 			}
- 			 		}
- 			 	}
-				.project_p {
-					height: 70%;
- 			 		width: 100%;
-					background-size: cover;
-					background-position: center;
-					background-repeat: no-repeat;
- 			 	}
- 			 	.project_01 {
-  					background-image: url("../images/projects/project_01.jpg");
-  				}
-  				.project_02 {
-  					background-image: url("../images/projects/project_02.jpg");
-  				}
-  				.project_03 {
-  					background-image: url("../images/projects/project_03.jpg");
-  				}
-  				.project_04 {
-  					background-image: url("../images/projects/project_04.jpg");
-  				}
-  				.project_05 {
-  					background-image: url("../images/projects/project_05.jpg");
-  				}
-  				.project_06 {
-  					background-image: url("../images/projects/project_06.jpg");
-  				}
-  				.project_07 {
-  					background-image: url("../images/projects/project_07.jpg");
-  				}
-  				.project_08 {
-  					background-image: url("../images/projects/project_08.jpg");
-  				}
-  				.project_09 {
-  					background-image: url("../images/projects/project_09.jpg");
-  				}
-  				.project_10 {
-  					background-image: url("../images/projects/project_10.jpg");
-  				}
-  				.project_11 {
-  					background-image: url("../images/projects/project_11.jpg");
-  				}
- 			}
- 			.line_glam {
-  				border-bottom: solid 2px brown;
+	 			 		}
+	 			 		.link_repo {
+		 			 		text-align: center;
+		 			 		width: 20%;
+	 			 			.projects_link {
+		 			 			width: 100%;
+		 			 			height: 100%;
+								text-decoration: none;
+		 			 			display: flex;
+		 			 			align-items: center;
+		 			 			align-content: center;
+		 			 			justify-content: center;
+								background-color: $grey;
+								border-left: solid 1px $white;
+								&:hover {
+		 			 				background-color: $pink;
+		 			 			}
+		 			 			i {
+		 			 				font-size: 30px;
+		 			 				color: $white;
+		 			 				@media #{$desktop} {
+		 			 					font-size: 20px;
+		 			 				}
+		 			 			}
+	 			 			}
+	 			 		}
+	 			 	}
+					.project_p {
+						height: 70%;
+	 			 		width: 100%;
+						background-size: cover;
+						background-position: center;
+						background-repeat: no-repeat;
+	 			 	}
+	 			 	.project_01 {
+	  					background-image: url("../images/projects/project_01.jpg");
+	  				}
+	  				.project_02 {
+	  					background-image: url("../images/projects/project_02.jpg");
+	  				}
+	  				.project_03 {
+	  					background-image: url("../images/projects/project_03.jpg");
+	  				}
+	  				.project_04 {
+	  					background-image: url("../images/projects/project_04.jpg");
+	  				}
+	  				.project_05 {
+	  					background-image: url("../images/projects/project_05.jpg");
+	  				}
+	  				.project_06 {
+	  					background-image: url("../images/projects/project_06.jpg");
+	  				}
+	  				.project_07 {
+	  					background-image: url("../images/projects/project_07.jpg");
+	  				}
+	  				.project_08 {
+	  					background-image: url("../images/projects/project_08.jpg");
+	  				}
+	  				.project_09 {
+	  					background-image: url("../images/projects/project_09.jpg");
+	  				}
+	  				.project_10 {
+	  					background-image: url("../images/projects/project_10.jpg");
+	  				}
+	  				.project_11 {
+	  					background-image: url("../images/projects/project_11.jpg");
+	  				}
+	 			}
 			}
 		}
     }
-}
 
 }
-
-
-
-
-
-
 
 /* -----------CONTACT--------------- */ 
 

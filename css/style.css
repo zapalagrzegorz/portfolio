@@ -977,17 +977,18 @@ body {
           background-color: #BB8181; }
     .projects .project_cell_two .row {
       border: solid 2px red;
-      width: 100%;
+      max-width: 100%;
+      width: 1200px;
       height: 85%;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: space-between;
       overflow: auto; }
       .projects .project_cell_two .row .projects_col {
         width: 320px;
         height: 300px;
         margin: 10px;
-        flex-wrap: wrap; }
+        border: solid 2px blue; }
         @media (min-width: 992px) and (max-width: 1200px) {
           .projects .project_cell_two .row .projects_col {
             width: 240px;
@@ -1013,7 +1014,7 @@ body {
               width: 60%;
               text-align: center;
               font-family: "Open Sans Condensed", sans-serif;
-              font-size: 16px;
+              font-size: 26px;
               color: #808080;
               padding: 2px; }
               @media (min-width: 992px) and (max-width: 1200px) {
@@ -1091,8 +1092,6 @@ body {
             background-image: url("../images/projects/project_10.jpg"); }
           .projects .project_cell_two .row .projects_col .projects_box .project_11 {
             background-image: url("../images/projects/project_11.jpg"); }
-        .projects .project_cell_two .row .projects_col .line_glam {
-          border-bottom: solid 2px brown; }
 
 /* -----------CONTACT--------------- */
 .contact {
