@@ -57,18 +57,9 @@ body {
 	@media #{$tablet} {
    		background-image: none;
 	}
-	@media #{$smartphone} {
+	@media #{$smartphone, $phone, $smallphone } {
    		position: relative;
    		background-image: none;
-	}
-	@media #{$phone} {
-   		position: relative;
-   		background-image: none;
-	}
-	@media #{$smallphone} {
-   		position: relative;
-   		padding: 0;
-   		
 	}
 	.header_navigation {
 		display: -ms-flexbox;
@@ -109,8 +100,17 @@ body {
 		.nav_list {
 			display: flex;
 			justify-content: space-between;
-			@media #{$phone} {
-				display: none;
+			 @media #{$phone, $smallphone} {
+				display: flex;
+	            flex-direction: column;
+	            position: absolute;
+	            background-color: $pink;
+	            width: 100%;
+	            height: calc(100% - 114px);
+	            top: 114px;
+	            z-index: 2;
+	            justify-content: center;
+	            align-items: center;
 			}
 			.nav_item {
 				list-style-type: none;
@@ -152,13 +152,13 @@ body {
 	}
 	.toggle {
 			display: none;
-			@media #{$tablet, $smartphone} {
+			@media #{$tablet, $smartphone, $phone, $smallphone} {
 	   			display: block;
 			}
 		}
 	}
 /*-----------------------TOGGLER -------------------*/
-@media #{$tablet, $smartphone} {
+@media #{$tablet, $smartphone, $phone, $smallphone} {
 	#menu {
 	  text-align: center;
 	  text-transform: uppercase;
@@ -181,6 +181,8 @@ body {
 	  transition: all 700ms cubic-bezier(0.46, -0.85, 0, 0.79);
 	  z-index: 100;
 	  width: 100%;
+	  @media #{$phone, $smallphone} {
+		}
 	}
 
 	.open-menu #menu {
@@ -197,13 +199,19 @@ body {
 	}
 
 	#menu li a {
-	  padding: 1.2em 0;
-	  display: block;
-	  text-decoration: none;
-	  color: $white;
-	  font-size: 30px;
-	  @media #{$smartphone} {
+		 padding: 1.2em 0;
+		 display: block;
+		 text-decoration: none;
+		 color: $white;
+		 font-size: 30px;
+		 @media #{$smartphone} {
 			font-size: 20px;
+		}
+		@media #{$phone, $smallphone} {
+			font-size: 20px;
+			border: solid 1px $white;
+			background-color: $pink;
+			width: 100vw;
 		}
 	}
 
@@ -402,12 +410,7 @@ body {
 	background-color: $white;
 	display: flex;
 	flex-direction: row;
-	@media #{$smartphone} {
-		flex-wrap: wrap;
-   		max-height: 100%;
-   		margin-top: 40px;
-	}
-	@media #{$phone} {
+	@media #{$smartphone, $phone} {
 		flex-wrap: wrap;
    		max-height: 100%;
    		margin-top: 40px;
@@ -437,13 +440,7 @@ body {
 			@media #{$tablet} {
 		   		left: 30px;
 			}
-			@media #{$smartphone} {
-		   		position: static;
-			}
-			@media #{$phone} {
-		   		position: static;
-			}
-			@media #{$smallphone} {
+			@media #{$smartphone, $phone, $smallphone} {
 		   		position: static;
 			}
 			.about_title {
@@ -453,10 +450,7 @@ body {
 				@media #{$smartphone} {
 					font-size: 50px;
 				}
-				@media #{$phone} {
-					font-size: 50px;
-				}
-				@media #{$smallphone} {
+				@media #{$phone, $smallphone} {
 					font-size: 50px;
 				}
 			}	
@@ -481,26 +475,10 @@ body {
 	   		background-image: none;
 	   		min-width: 150px;
 		}
-		@media #{$smartphone} {
+		@media #{$smartphone, $phone, $smallphone} {
 			background-image: none;
 			height: 25%;
 			width: 100%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		@media #{$phone} {
-			background-image: none;
-	   		width: 100%;
-	   		height: 25%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		@media #{$smallphone} {
-			background-image: none;
-	   		width: 100%;
-	   		height: 25%;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -546,13 +524,7 @@ body {
 		width: 50%;
 		display: flex;
 		align-items: center;
-		@media #{$smartphone} {
-			width: 100%;
-		}
-		@media #{$phone} {
-			width: 100%;
-		}
-		@media #{$phone} {
+		@media #{$smartphone, $phone, $smallphone} {
 			width: 100%;
 		}
 		.about_article {
@@ -600,13 +572,7 @@ body {
 	width: 100%;
 	display: flex;
 	background-color: $pink;
-	@media #{$smartphone} {
-   		display: none;
-	}
-	@media #{$phone} {
-   		display: none;
-	}
-	@media #{$smallphone} {
+	@media #{$smartphone, $phone, $smallphone} {
    		display: none;
 	}
 	.int_side {
@@ -705,10 +671,7 @@ body {
 	background-image: url('../images/line_dark.jpg');
 	background-repeat: no-repeat;
 	background-size: contain;
-	@media #{$desktop} {
-   		background-image: none;
-	}
-	@media #{$tablet} {
+	@media #{$desktop, $tablet} {
    		background-image: none;
 	}
 	@media #{$phone} {
@@ -798,15 +761,7 @@ body {
 	}
 	.skills_cell {
 		width: 25%;
-		@media #{$smartphone} {
-   			width: 100%;
-   			position: static;
-		}
-		@media #{$phone} {
-   			width: 100%;
-   			position: static;
-		}
-		@media #{$smallphone} {
+		@media #{$smartphone, $phone, $smallphone} {
    			width: 100%;
    			position: static;
 		}
@@ -930,7 +885,7 @@ body {
 			width: 100%;
 			align-items: center;
 		}
-		@media #{$smartphone} {
+		@media #{$smartphone, $smallphone} {
 			flex-wrap: wrap;
 	   		width: 100%;
 	   		height: 100%;
@@ -939,11 +894,6 @@ body {
 			flex-wrap: wrap;
 		   	width: 100%;
 		   	height: 80%;
-		}
-		@media #{$smallphone} {	
-			flex-wrap: wrap;
-		   	width: 100%;
-		   	height: 100%;
 		}
 		.skills_cell_three {
 			width: 100%;
@@ -1345,17 +1295,9 @@ body {
 		@media #{$tablet} {
    			background-image: none;
    		}
-   		@media #{$smartphone} {
+   		@media #{$smartphone, $phone, $smallphone} {
    			background-image: none;
    			width: 100%;
-		}
-		@media #{$phone} {
-	   		background-image: none;
-	   		width: 100%;
-		}
-		@media #{$smallphone} {
-	   		background-image: none;
-	   		width: 100%;
 		}
 		.contact_side {
 			position: relative;
@@ -1364,20 +1306,12 @@ body {
 			@media #{$max} {
    				left: 110px;
 			}
-			@media #{$desktop} {
+			@media #{$desktop, $tablet} {
    				left: 30px;
 			}
-			@media #{$tablet} {
-   				left: 30px;
-			}
-			@media #{$smartphone} {
+			@media #{$smartphone, $phone} {
 				left: 0;
 	   			text-align: center;
-	   			width: 100%;
-			}
-			@media #{$phone} {
-				left: 0;
-		   		text-align: center;
 	   			width: 100%;
 			}
 			@media #{$smallphone} {
@@ -1445,17 +1379,9 @@ body {
 	   		flex-wrap: wrap;
 	   		position: relative;
 		}
-		@media #{$smartphone} {
+		@media #{$smartphone, $phone, $smallphone} {
 			flex-wrap: wrap;
 	   		width: 100%;
-		}
-		@media #{$phone} {	
-			flex-wrap: wrap;
-		   	width: 100%;
-		}
-		@media #{$smallphone} {
-			flex-wrap: wrap;
-		   	width: 100%;
 		}
 		.contact_cell_two {
 			width: 33.3%;
@@ -1471,10 +1397,7 @@ body {
 		   		width: 100%;
 		   		height: 50px;
 			}
-			@media #{$phone} {	
-			   	width: 100%;
-			}
-			@media #{$smallphone} {
+			@media #{$phone, $smallphone} {
 			   	width: 100%;
 			}
 			.contact_content {
@@ -1522,14 +1445,8 @@ body {
 				height: 90%;
 				bottom: 0;
 			}
-			@media #{$smartphone} {
+			@media #{$smartphone, $phone, $smallphone} {
 		   		width: 100%;
-			}
-			@media #{$phone} {	
-			   	width: 100%;
-			}
-			@media #{$smallphone} {
-			   	width: 100%;
 			}
 			.tree_row {
 				display: flex;
