@@ -2,12 +2,12 @@ $(function(){
 
     /* Counter */
 
-	var dateTop = $('#interest').offset().top - window.innerHeight,
+	var interestTop = $('#interest').offset().top - window.innerHeight,
 	counter = $('.counter');
 
 	$(window).scroll(function() {
 		
-		if (counter.text() == 0 && $(window).scrollTop() > dateTop) {
+		if (counter.text() == 0 && $(window).scrollTop() > interestTop) {
 			counter.each(function() {
 				var $this = $(this),
 				countTo = $this.attr('data-count'),
