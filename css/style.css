@@ -68,6 +68,9 @@ body {
   margin: 0 auto;
   padding: 20px 0px; }
 
+section {
+  margin: 3em 0; }
+
 /* ----------------HEADER------------ */
 .header {
   width: 100%;
@@ -753,7 +756,7 @@ body {
               @media (min-width: 768px) and (max-width: 991px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_time {
                   font-size: 24px; } }
-              @media (max-width: 576px), (max-width: 450px) {
+              @media (min-width: 577px) and (max-width: 768px), (max-width: 576px), (max-width: 450px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_time {
                   font-size: 20px; } }
             .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_article {
@@ -772,6 +775,9 @@ body {
               @media (min-width: 768px) and (max-width: 991px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_article {
                   font-size: 30px; } }
+              @media (min-width: 577px) and (max-width: 768px) {
+                .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_article {
+                  font-size: 20px; } }
               @media (max-width: 576px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_article {
                   font-size: 20px; } }
@@ -785,6 +791,10 @@ body {
               @media (min-width: 768px) and (max-width: 991px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_number {
                   font-size: 70px; } }
+              @media (min-width: 577px) and (max-width: 768px) {
+                .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_number {
+                  font-size: 36px;
+                  font-weight: 800; } }
               @media (max-width: 576px), (max-width: 450px) {
                 .interest .int_box .int_cell_three .tree_row .tree_cell .tree_content .tree_number {
                   font-size: 36px;
@@ -821,8 +831,7 @@ body {
   @media (max-width: 576px) {
     .skills {
       flex-wrap: wrap;
-      max-height: 100%;
-      border-bottom: solid 5px #454343; } }
+      max-height: 100%; } }
   @media (max-width: 450px) {
     .skills {
       flex-wrap: wrap;
@@ -1066,16 +1075,22 @@ body {
   display: flex; }
   @media (min-width: 577px) and (max-width: 768px) {
     .projects {
-      display: none; } }
-  @media (max-width: 576px) {
+      flex-wrap: wrap;
+      height: 100%; } }
+  @media (max-width: 576px), (max-width: 450px) {
     .projects {
-      display: none; } }
-  @media (max-width: 450px) {
-    .projects {
-      display: none; } }
+      flex-wrap: wrap; } }
   @media (min-width: 768px) and (max-width: 991px) {
     .projects .project_cell {
       width: 100%; } }
+  @media (min-width: 577px) and (max-width: 768px), (max-width: 576px), (max-width: 450px) {
+    .projects .project_cell {
+      background-image: none;
+      width: 100%; } }
+  @media (min-width: 577px) and (max-width: 768px) {
+    .projects .project_cell {
+      height: 100%;
+      margin-top: 12em; } }
   .projects .project_cell .project_side {
     position: relative;
     left: 175px;
@@ -1089,6 +1104,24 @@ body {
     @media (min-width: 768px) and (max-width: 991px) {
       .projects .project_cell .project_side {
         left: 30px; } }
+    @media (min-width: 577px) and (max-width: 768px) {
+      .projects .project_cell .project_side {
+        left: 0;
+        text-align: center;
+        width: 100%; } }
+    @media (max-width: 576px) {
+      .projects .project_cell .project_side {
+        left: 0;
+        text-align: center;
+        width: 100%; } }
+    @media (max-width: 450px) {
+      .projects .project_cell .project_side {
+        left: 0;
+        text-align: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative; } }
     .projects .project_cell .project_side .project_link {
       color: #ffffff;
       bottom: -70px;
@@ -1105,6 +1138,31 @@ body {
       @media (min-width: 992px) and (max-width: 1200px) {
         .projects .project_cell .project_side .project_title {
           font-size: 50px; } }
+      @media (min-width: 577px) and (max-width: 768px) {
+        .projects .project_cell .project_side .project_title {
+          width: 100%;
+          font-size: 80px;
+          background-color: #A41320;
+          padding: 20px;
+          color: #ffffff; } }
+      @media (max-width: 576px) {
+        .projects .project_cell .project_side .project_title {
+          width: 100%;
+          font-size: 80px;
+          background-color: #A41320;
+          padding: 20px;
+          color: #ffffff;
+          position: absolute;
+          bottom: -100px; } }
+      @media (max-width: 450px) {
+        .projects .project_cell .project_side .project_title {
+          width: 100%;
+          font-size: 80px;
+          background-color: #A41320;
+          padding: 20px;
+          color: #ffffff;
+          position: absolute;
+          bottom: -100px; } }
     .projects .project_cell .project_side .project_line {
       background-color: #A41320; }
   .projects .project_cell_one {
@@ -1113,18 +1171,31 @@ body {
     background-size: contain;
     background-color: #A41320;
     width: 25%; }
-    @media (min-width: 992px) and (max-width: 1200px) {
+    @media (min-width: 992px) and (max-width: 1200px), (min-width: 768px) and (max-width: 991px) {
       .projects .project_cell_one {
-        background-image: none; } }
-    @media (min-width: 768px) and (max-width: 991px) {
-      .projects .project_cell_one {
-        background-image: none; } }
+        background-image: none;
+        width: 100%; } }
     @media (min-width: 577px) and (max-width: 768px) {
       .projects .project_cell_one {
-        background-image: none; } }
+        background-image: none;
+        width: 100%;
+        background-color: #A41320; } }
+    @media (max-width: 576px), (max-width: 450px) {
+      .projects .project_cell_one {
+        background-image: none;
+        width: 100%;
+        background-color: transparent; } }
   .projects .project_cell_two {
     width: 75%;
     border: solid 1px #454343; }
+    @media (min-width: 577px) and (max-width: 768px) {
+      .projects .project_cell_two {
+        width: 100%; } }
+    @media (max-width: 576px), (max-width: 450px) {
+      .projects .project_cell_two {
+        width: 100%;
+        margin-top: 5em;
+        border: none; } }
     .projects .project_cell_two .my-buttons {
       margin: 0 auto;
       text-transform: uppercase;
@@ -1137,6 +1208,9 @@ body {
       @media (min-width: 577px) and (max-width: 768px) {
         .projects .project_cell_two .my-buttons {
           flex-wrap: wrap; } }
+      @media (max-width: 576px), (max-width: 450px) {
+        .projects .project_cell_two .my-buttons {
+          display: none; } }
       .projects .project_cell_two .my-buttons .project-btn {
         width: 100%;
         padding: 20px;
@@ -1155,7 +1229,8 @@ body {
         @media (min-width: 577px) and (max-width: 768px) {
           .projects .project_cell_two .my-buttons .project-btn {
             width: 25%;
-            flex-wrap: wrap; } }
+            flex-wrap: wrap;
+            border: solid 1px #ffffff; } }
         .projects .project_cell_two .my-buttons .project-btn:hover {
           border-bottom: solid 5px #A41320; }
         .projects .project_cell_two .my-buttons .project-btn:focus {
@@ -1180,6 +1255,15 @@ body {
           .projects .project_cell_two .row .projects_col {
             width: 260px;
             height: 220px; } }
+        @media (min-width: 577px) and (max-width: 768px) {
+          .projects .project_cell_two .row .projects_col {
+            width: 300px;
+            height: 200px; } }
+        @media (max-width: 576px), (max-width: 450px) {
+          .projects .project_cell_two .row .projects_col {
+            width: 100vw;
+            height: 100%;
+            margin: 0 auto; } }
         .projects .project_cell_two .row .projects_col .projects_box {
           border: solid 3px #454343;
           width: 100%;
@@ -1188,11 +1272,19 @@ body {
           overflow: hidden;
           display: flex;
           flex-direction: column; }
+          @media (max-width: 576px), (max-width: 450px) {
+            .projects .project_cell_two .row .projects_col .projects_box {
+              border: none; }
+              .projects .project_cell_two .row .projects_col .projects_box:last-child {
+                border-bottom: solid 1px #454343; } }
           .projects .project_cell_two .row .projects_col .projects_box .project_name {
             height: 30%;
             width: 100%;
             display: flex;
             border-top: solid 1px #454343; }
+            @media (max-width: 576px), (max-width: 450px) {
+              .projects .project_cell_two .row .projects_col .projects_box .project_name {
+                height: 100%; } }
             .projects .project_cell_two .row .projects_col .projects_box .project_name .title {
               width: 60%;
               text-align: center;
@@ -1206,6 +1298,9 @@ body {
               @media (min-width: 768px) and (max-width: 991px) {
                 .projects .project_cell_two .row .projects_col .projects_box .project_name .title {
                   font-size: 26px; } }
+              @media (max-width: 576px), (max-width: 450px) {
+                .projects .project_cell_two .row .projects_col .projects_box .project_name .title {
+                  font-size: 20px; } }
             .projects .project_cell_two .row .projects_col .projects_box .project_name .link_web {
               width: 20%; }
               .projects .project_cell_two .row .projects_col .projects_box .project_name .link_web .projects_link {
@@ -1224,6 +1319,9 @@ body {
                   font-size: 30px;
                   color: #ffffff; }
                   @media (min-width: 992px) and (max-width: 1200px) {
+                    .projects .project_cell_two .row .projects_col .projects_box .project_name .link_web .projects_link i {
+                      font-size: 20px; } }
+                  @media (max-width: 576px), (max-width: 450px) {
                     .projects .project_cell_two .row .projects_col .projects_box .project_name .link_web .projects_link i {
                       font-size: 20px; } }
             .projects .project_cell_two .row .projects_col .projects_box .project_name .link_repo {
@@ -1253,6 +1351,9 @@ body {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat; }
+            @media (max-width: 576px), (max-width: 450px) {
+              .projects .project_cell_two .row .projects_col .projects_box .project_p {
+                display: none; } }
           .projects .project_cell_two .row .projects_col .projects_box .project_01 {
             background-image: url("../images/projects/project_01.jpg"); }
           .projects .project_cell_two .row .projects_col .projects_box .project_02 {
