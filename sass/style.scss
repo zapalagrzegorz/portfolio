@@ -3,9 +3,9 @@
 @import 'reset';
 
 $font: 'Open Sans Condensed', sans-serif;
-$grey: #808080;//#2F2323; 
-$pink: #BB8181; //
-$white: #fafafa; //rgb(250, 250, 250)
+$grey: #454343; //rgb(69, 67, 67)
+$pink: #A41320; //rgb(164, 19, 32)
+$white: #ffffff; //rgb(250, 250, 250)
 
 /*----------------RWD------------*/
 $max: "(max-width: 1600px)";
@@ -104,10 +104,10 @@ body {
 				display: flex;
 	            flex-direction: column;
 	            position: absolute;
-	            background-color: $pink;
+	            background-color: rgba(164, 19, 32, 0.8);
 	            width: 100%;
-	            height: calc(100% - 114px);
-	            top: 114px;
+	            height: calc(100% - 250px);
+	            top: 250px;
 	            z-index: 2;
 	            justify-content: center;
 	            align-items: center;
@@ -142,7 +142,7 @@ body {
 					}
 					&:hover {
 						border-bottom: 2px solid $white;
-						@media #{$desktop} {
+						@media #{$desktop, $max, $big} {
    							font-weight: 800;
 						}
 					}
@@ -163,7 +163,7 @@ body {
 	  text-align: center;
 	  text-transform: uppercase;
 	  text-align: left;
-	  background-color: rgba(187, 129, 129, 0.8);
+	  background-color: rgba(164, 19, 32, 0.8);
 	  width: auto;
 	  display: inline-block;
 	  padding: 0;
@@ -196,6 +196,7 @@ body {
 	  position: relative;
 	  float: left;
 	  text-align: center;
+	  margin-left: 10px;
 	}
 
 	#menu li a {
@@ -215,9 +216,12 @@ body {
 		}
 	}
 
-	#menu li.current a,
+	#menu li:first-child a,
 	#menu li:hover a {
 	  color: #000;
+	  @media #{$tablet, $smartphone} {
+	   	margin-left: 20px;
+		}
 	}
 
 	#toggle {
@@ -258,9 +262,7 @@ body {
 
 	.open-menu #toggle .icon-bar:first-child {
 	  opacity: 0;
-	}
-
-			
+	}			
 }
 /*------------------------END TOGGLER------------------*/
 
@@ -377,6 +379,11 @@ body {
 	@media #{$smartphone, $phone, $smallphone} {
    		display: none;
 	}
+	&:hover {
+		@media #{$desktop, $max, $big} {
+   			font-weight: 800;
+		}
+	}
 }
 
 .side_number {
@@ -392,6 +399,10 @@ body {
 .header_link {
 	color: $white;
 	bottom: 50px;
+	padding-left: 30px;
+	@media #{$tablet} {
+		padding: 0;
+	}
 }
 
 .header_line {
@@ -400,6 +411,10 @@ body {
 
 .header_number {
 	color: $white;
+	padding-left: 30px;
+	@media #{$tablet} {
+		padding: 0;
+	}
 }
 
 /* -----------ABOUT------------- */
@@ -573,38 +588,96 @@ body {
 	display: flex;
 	background-color: $pink;
 	@media #{$smartphone, $phone, $smallphone} {
-   		display: none;
+   		flex-wrap: wrap;
+   		margin-top: 2em;
+   		background-color: $white;
 	}
-	.int_side {
-		color: $white;
-		position: relative;
-		font-family: $font;
-		left: 175px;
-		top: 165px;
-		@media #{$max} {
-   			left: 110px;
+	.int_cell_one {
+		width: 25%;
+		background-image: url('../images/line_dark.jpg');
+		background-repeat: no-repeat;
+		background-size: contain;
+		@media #{$desktop, $tablet} {
+	   		background-image: none;
 		}
-		@media #{$desktop} {
-   			left: 30px;
+		@media #{$smartphone, $phone, $smallphone} {
+	   		width: 100%;
+	   		position: static;
+	   		background-image: none;
+	   		height: 1em;
 		}
-		@media #{$tablet} {
-   			left: 30px;
-		}
-		.int_number {
+		.int_side {
 			color: $white;
-			margin-bottom: 46px;
-		}
-		.int_title {
-			color: white;
-			font-size: 7vmin;
-		}	
-		.int_line {
-			background-color: $pink;
-		}
-		.int_link {
-			color: $white;
-			left: -55px;
-			bottom: -100px;
+			position: relative;
+			font-family: $font;
+			left: 175px;
+			top: 165px;
+			@media #{$max} {
+	   			left: 110px;
+			}
+			@media #{$desktop} {
+	   			left: 30px;
+			}
+			@media #{$tablet} {
+	   			left: 30px;
+			}
+			@media #{$smartphone, $phone} {
+				left: 0;
+			   	text-align: center;
+		   		width: 100%;
+		   		display: flex;
+		   		justify-content: center;
+		   		position: relative;
+			}
+			@media #{$smallphone} {
+				left: 0;
+			   	text-align: center;
+		   		width: 100%;
+		   		display: flex;
+		   		justify-content: center;
+		   		position: relative;
+			}
+			.int_number {
+				color: $white;
+				margin-bottom: 46px;
+			}
+			.int_title {
+				color: white;
+				font-size: 7vmin;
+				@media #{$smartphone} {
+						width: 100%;
+						font-size: 80px;
+						background-color: $pink;
+						padding: 10px;
+						color: $white;
+					}
+					@media #{$phone} {
+						width: 100%;
+						font-size: 60px;
+						background-color: $pink;
+						padding: 20px;
+						color: $white;
+						position: absolute;
+						bottom: 80px;
+					}
+					@media #{$smallphone} {
+						width: 100%;
+						font-size: 50px;
+						background-color: $pink;
+						padding: 20px;
+						color: $white;
+						position: absolute;
+						bottom: 60px;
+					}
+			}	
+			.int_line {
+				background-color: $pink;
+			}
+			.int_link {
+				color: $white;
+				left: -55px;
+				bottom: -100px;
+			}
 		}
 	}
 	.int_box {
@@ -613,6 +686,10 @@ body {
 		@media #{$tablet} {
    			flex-wrap: wrap;
    			position: relative;
+		}
+		@media #{$smartphone, $phone, $smallphone} {
+			flex-wrap: wrap;
+	   		width: 100%;
 		}
 		.int_cell_two {
 			width: 33.3%;
@@ -625,12 +702,41 @@ body {
 			justify-content: center;
 			@media #{$tablet} {
    				width: 100%;
-   				height: 10%;
+   				height: 20%;
+			}
+			@media #{$smartphone} {
+		   		width: 100%;
+		   		height: 30%;
+		   		background-color: $grey;
+		   		margin-top: 2em;
+			}
+			@media #{$phone, $smallphone} {
+			   	display: none;
+			   
 			}
 			.int_content {
 				text-align: center;
+				font-size: 60px;
+				.typewrite {
+					font-weight: 800;
+				}
 				@media #{$tablet} {
    					margin: 0;
+				}
+				@media #{$smartphone} {
+				   	width: 100%;
+				   	height: 50px;
+				   	margin: 0 auto;
+				}
+				@media #{$phone} {	
+					 width: 100%;
+					font-size: 20px;
+					 margin: 0 auto;
+				}
+				@media #{$smallphone} {
+					width: 100%;
+					font-size: 20px;
+					margin: 0 auto;
 				}
 			}
 		}
@@ -640,8 +746,15 @@ body {
 			@media #{$tablet} {
 				width: 100%;
 				position: absolute;
-				height: 90%;
+				height: 80%;
 				bottom: 0;
+			}
+			@media #{$smartphone} {
+				width: 100%;
+			}
+			@media #{$phone, $smallphone} {
+		   		width: 100%;
+		   		margin-top: 2em;
 			}
 			.tree_row {
 				display: flex;
@@ -649,14 +762,78 @@ body {
 				@media #{$tablet} {
 					width: 100%;
 				}
+				@media #{$smartphone, $phone, $smallphone} {
+		   			flex-wrap: wrap;
+				}
 				.tree_cell {
 					border-top: 1px solid #000000;
 					width: 50%;
 					display: flex;
 					align-items: center;
 					justify-content: center;
+					@media #{$phone, $smallphone} {
+	   					width: 100%;
+					}
 					.tree_content {
 						text-align: center;
+						@media #{$smartphone} {
+					   		height: 100%;
+						}
+						@media #{$phone, $smallphone} {	
+						   	height: 100%;
+						}
+						.tree_time {
+							font-size: 4vmin;
+							font-family: $font;
+							margin-top: 50px;
+							padding: 10px;
+							@media #{$desktop} {
+						    	font-size: 26px;
+						    	margin-top: 100px;
+							}
+							@media #{$tablet} {
+						   		font-size: 24px;
+							}
+							@media #{$phone, $smallphone} {	
+								font-size: 20px;
+							}
+						}
+						.tree_article {
+							font-size: 4vmin;
+							font-family: $font;
+							font-weight: 800;
+							max-width: 220px;
+							margin-top: 10px;
+							@media #{$max} {
+						   		font-size: 30px;
+							}
+							@media #{$desktop} {
+						   		font-size: 30px;
+						    	line-height: 50px;
+							}
+							@media #{$tablet} {
+						   		font-size: 30px;
+							}
+							@media #{$phone} {	
+								font-size: 20px;
+							}
+							@media #{$smallphone} {	
+								font-size: 20px;
+							}
+						}
+						.tree_number {
+							font-size: 9vmin;
+							font-family: $font;
+							font-weight: 500;
+							@media #{$tablet} {
+						   		font-size: 70px;
+							}
+							@media #{$phone, $smallphone} {	
+								font-size: 36px;
+								font-weight: 800;
+								margin-bottom: 1em;
+							}
+						}
 					}
 				}
 			}
@@ -666,21 +843,13 @@ body {
 
 
 
-.int_cell_one {
-	width: 25%;
-	background-image: url('../images/line_dark.jpg');
-	background-repeat: no-repeat;
-	background-size: contain;
-	@media #{$desktop, $tablet} {
-   		background-image: none;
-	}
-	@media #{$phone} {
-		background-image: none;
-   		min-width: 205px;
-	}
-}
+
 
 .tree_cell_one_int {
+	border-right: 1px solid #000000;
+}
+
+.tree_cell_two_int {
 	border-right: 1px solid #000000;
 }
 
@@ -698,46 +867,7 @@ body {
 	}
 }
 
-.tree_number {
-	font-size: 9vmin;
-	font-family: $font;
-	font-weight: 500;
-	@media #{$tablet} {
-   		font-size: 70px;
-	}
-}
 
-.tree_time {
-	font-size: 4vmin;
-	font-family: $font;
-	margin-top: 50px;
-	padding: 10px;
-	@media #{$desktop} {
-    	font-size: 26px;
-    	margin-top: 100px;
-	}
-	@media #{$tablet} {
-   		font-size: 24px;
-	}
-}
-
-.tree_article {
-	font-size: 4vmin;
-	font-family: $font;
-	font-weight: 800;
-	max-width: 220px;
-	margin-top: 10px;
-	@media #{$max} {
-   		font-size: 30px;
-	}
-	@media #{$desktop} {
-   		font-size: 30px;
-    	line-height: 50px;
-	}
-	@media #{$tablet} {
-   		font-size: 30px;
-	}
-}
 
 /* ----------SKILLS ------------------ */ 
 
@@ -924,7 +1054,7 @@ body {
 						@media #{$tablet} {
 				   			margin: 0 auto;
 							width: 100%;
-				   			font-size: 50px;
+				   			font-size: 30px;
 				   			background-color: $grey;
 				   			color: $white;	
 						}
@@ -955,21 +1085,25 @@ body {
 						align-items: center;
 						flex-wrap: wrap;
 						@media #{$tablet} {
-				   			padding: 50px;
+				   			padding: 20px;
 						}
 						@media #{$smartphone} {
 				   			padding: 16px;
 						}
 						i {
-							font-size: 8vmin;
 							padding: 20px;
 							margin: 0 auto;
-							color: grey;
+							color: $grey;
 							@media #{$max} {
-				   				font-size: 50px;
+								padding: 40px;
+				   				font-size: 100px;
+							}
+							@media #{$big} {
+								padding: 35px;
+				   				font-size: 90px;
 							}
 							@media #{$tablet} {
-				   				font-size: 60px;
+				   				font-size: 50px;
 							}
 							@media #{$smartphone} {
 								padding: 30px;
@@ -1002,12 +1136,6 @@ body {
 		}
 	}
 }
-
-
-
-
-
-
 
 /* ------------------PROJECTS----------------------- */
 
@@ -1275,13 +1403,7 @@ body {
 	width: 100%;
 	display: flex;
 	background-color: $white;
-	@media #{$smartphone} {
-   		flex-wrap: wrap;
-	}
-	@media #{$phone} {
-   		flex-wrap: wrap;
-	}
-	@media #{$smallphone} {
+	@media #{$smartphone, $phone, $smallphone} {
    		flex-wrap: wrap;
 	}
 	.contact_cell_one {
@@ -1391,7 +1513,7 @@ body {
 			justify-content: center;
 			@media #{$tablet} {
 	   			width: 100%;
-	   			height: 10%;
+	   			height: 20%;
 			}
 			@media #{$smartphone} {
 		   		width: 100%;
@@ -1403,7 +1525,7 @@ body {
 			.contact_content {
 				text-align: center;
 				@media #{$tablet} {
-	   				margin-bottom: 40px;
+	   				margin: 20px 0;
 				}
 				.two_article {
 					color: $pink;
@@ -1442,7 +1564,7 @@ body {
 			@media #{$tablet} {
 				width: 100%;
 				position: absolute;
-				height: 90%;
+				height: 80%;
 				bottom: 0;
 			}
 			@media #{$smartphone, $phone, $smallphone} {
