@@ -36,11 +36,6 @@ body {
 	margin: 0 auto;
 	padding: 20px 0px;
 }
-
-section {
-	margin: 3em 0;
-}
-
 /* ----------------HEADER------------ */
 
 .header {
@@ -291,38 +286,41 @@ section {
 		}
 	}
 	.hero_title {
-		font-size: 10vmin;
+		font-size: 7em;
 		color: $white;
 		font-family: $font;
 		text-align: center;
 		margin: 0 auto;
 		margin-top: 250px;
 		text-transform: uppercase;
+		text-align: center;
 		@media #{$tablet} {
-   			font-size: 80px;
+   			font-size: 5em;
 		}
 		@media #{$smartphone} {
-   			font-size: 64px;
+   			font-size: 4.5em;
+   			margin-top: 200px;
 		}
 		@media #{$phone} {
-   			font-size: 60px;
+   			font-size: 3.2em;
    			margin: 30px 0;
 		}
 		@media #{$smallphone} {
 			margin: 50px 0;
-   			font-size: 50px;
+   			font-size: 3em;
 		}
 	}
 	.hero_subtitle {
-		font-size: 30px;
-		letter-spacing: 2.6vmin;
+		font-size: 2em;
+		letter-spacing: 1em;
 		text-align: center;
 		margin: 0 auto;
 		margin-left: 20px;
 		margin-bottom: 20px;
 		font-family: $font;
 		@media #{tablet} {
-   			letter-spacing: 40px;
+   			letter-spacing: 2em;
+   			font-size: 10em;
 		}
 		@media #{$smartphone} {
    			font-size: 20px;
@@ -429,7 +427,12 @@ section {
 	background-color: $white;
 	display: flex;
 	flex-direction: row;
-	@media #{$smartphone, $phone} {
+	@media #{$smartphone} {
+		margin-top: 4em;
+		flex-wrap: wrap;
+   		max-height: 100%;
+	}
+	@media #{$phone} {
 		flex-wrap: wrap;
    		max-height: 100%;
    		margin-top: 40px;
@@ -467,7 +470,7 @@ section {
 				font-size: 7vmin;
 				font-family: $font;
 				@media #{$smartphone} {
-					font-size: 50px;
+					font-size: 4em;
 				}
 				@media #{$phone, $smallphone} {
 					font-size: 50px;
@@ -553,6 +556,7 @@ section {
 			margin: 0 175px;
 			font-family: $font;
 			font-weight: 400;
+			text-align: center;
 			.about_strong {
 				font-weight: 700;
 				color: $grey;
@@ -565,8 +569,8 @@ section {
 			   	font-size: 20px;
 			}
 			@media #{$smartphone} {
-			  	margin: 0 30px;
-				font-size: 32px;
+			  	margin: 0 2em;
+				font-size: 2em;
 			}
 			@media #{$phone} {
 				margin: 0 20px;
@@ -591,7 +595,12 @@ section {
 	width: 100%;
 	display: flex;
 	background-color: $pink;
-	@media #{$smartphone, $phone, $smallphone} {
+	@media #{$smartphone} {
+		margin-top: 4em;
+		flex-wrap: wrap;
+		background-color: transparent;
+	}
+	@media #{$phone, $smallphone} {
    		flex-wrap: wrap;
    		margin-top: 2em;
    		background-color: $white;
@@ -608,7 +617,6 @@ section {
 	   		width: 100%;
 	   		position: static;
 	   		background-image: none;
-	   		height: 1em;
 		}
 		.int_side {
 			color: $white;
@@ -649,11 +657,13 @@ section {
 				color: white;
 				font-size: 7vmin;
 				@media #{$smartphone} {
-						width: 100%;
-						font-size: 80px;
-						background-color: $pink;
-						padding: 10px;
-						color: $white;
+					width: 100%;
+					font-size: 4em;
+					background-color: $pink;
+					color: $white;
+					padding: 20px;
+					border-top: solid 6px $grey;
+					border-bottom: solid 6px $grey;
 					}
 					@media #{$phone} {
 						width: 100%;
@@ -708,13 +718,7 @@ section {
    				width: 100%;
    				height: 20%;
 			}
-			@media #{$smartphone} {
-		   		width: 100%;
-		   		height: 30%;
-		   		background-color: $grey;
-		   		margin-top: 2em;
-			}
-			@media #{$phone, $smallphone} {
+			@media #{$smartphone, $phone, $smallphone} {
 			   	display: none;
 			   
 			}
@@ -755,6 +759,7 @@ section {
 			}
 			@media #{$smartphone} {
 				width: 100%;
+				height: 100%;
 			}
 			@media #{$phone, $smallphone} {
 		   		width: 100%;
@@ -957,10 +962,12 @@ section {
    					font-size: 50px;
 				}
 				@media #{$smartphone} {
-					font-size: 50px;
+					font-size: 4em;
 					background-color: $pink;
 					color: $white;
 					padding: 20px;
+					border-top: solid 6px $grey;
+					border-bottom: solid 6px $grey;
 				}
 				@media #{$phone} {
 					font-size: 70px;
@@ -1166,13 +1173,15 @@ section {
 		@media #{$tablet} {
    			width: 100%;
 		}
-		@media #{$smartphone, $phone, $smallphone} {
+		@media #{$smartphone} {
+			width: 100%;
+	   		position: static;
+	   		background-image: none;
+			margin-top: 20em;
+		}
+		@media #{$phone, $smallphone} {
    			background-image: none;
    			width: 100%;
-		}
-		@media #{$smartphone} {
-			height: 100%;
-			margin-top: 12em;
 		}
 		.project_side {
 			position: relative;
@@ -1189,8 +1198,11 @@ section {
 			}
 			@media #{$smartphone} {
 				left: 0;
-	   			text-align: center;
-	   			width: 100%;  
+			   	text-align: center;
+		   		width: 100%;
+		   		display: flex;
+		   		justify-content: center;
+		   		position: relative;
 			}
 			@media #{$phone} {
 				left: 0;
@@ -1225,10 +1237,12 @@ section {
 				}
 				@media #{$smartphone} {
 					width: 100%;
-					font-size: 80px;
+					font-size: 4em;
 					background-color: $pink;
 					padding: 20px;
 					color: $white;
+					border-top: solid 6px $grey;
+					border-bottom: solid 6px $grey;
 					
 				}
 				@media #{$phone} {
@@ -1263,12 +1277,11 @@ section {
 		width: 25%;
 		@media #{$desktop, $tablet} {
 	   		background-image: none;
-	   		width: 100%;
 		}
 		@media #{$smartphone} {
 			background-image: none;
 	   		width: 100%;
-	   		background-color: $pink;
+	   		background-color: transparent;
 		}
 		@media #{$phone, $smallphone} {
 	   		background-image: none;
@@ -1316,6 +1329,7 @@ section {
 	    		@media #{$tablet} {
 	    			width: 25%;
 	   				flex-wrap: wrap;
+	   				font-size: 20px;
 				}
 				@media #{$smartphone} {
 					width: 25%;
@@ -1338,20 +1352,24 @@ section {
 			flex-wrap: wrap;
 			justify-content: space-around;
 			overflow: auto;
+			@media #{$tablet} {
+				height: 80%;
+			}
 	    	.projects_col {
 	    		width: 320px;
 	    		height: 300px ;
 			  	margin: 10px;
 			  	@media #{$desktop} {
-	   				width: 260px;
+	   				width: 200px;
 	   				height: 220px;
 				}
 				@media #{$tablet} {
 	   				width: 260px;
-	   				height: 220px;
+	   				height: 200px;
+	   				overflow: hidden;
 				}
 				@media #{$smartphone} {
-	   				width: 300px;
+	   				width: 260px;
 	   				height: 200px;
 				}
 				@media #{$phone, $smallphone} {
@@ -1389,7 +1407,7 @@ section {
 							color: $grey;
 							padding: 2px;
 							@media #{$desktop} {
-		 			 			font-size: 30px;
+		 			 			font-size: 1.4em;
 		 			 		}
 		 			 		@media #{$tablet} {
 		 			 			font-size: 26px;
@@ -1754,8 +1772,9 @@ section {
 
 .tree_cell_four {
 	background-color: $white;
-	@media #{$tablet} {
+	@media #{$desktop, $tablet} {
    		border-right: 1px solid #000000;
+   		border-bottom: 1px solid #000000;
 	}
 	@media #{$smallphone} {
 		border-top: 1px solid $grey;
