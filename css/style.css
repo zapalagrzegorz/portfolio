@@ -131,7 +131,7 @@ body {
         display: flex;
         flex-direction: column;
         position: absolute;
-        width: 103%;
+        width: 104%;
         height: calc(100% - 250px);
         top: 250px;
         z-index: 2;
