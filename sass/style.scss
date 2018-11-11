@@ -8,8 +8,8 @@ $pink: #A41320; //rgb(164, 19, 32)
 $white: #ffffff; //rgb(250, 250, 250)
 
 /*----------------RWD------------*/
-$max: "(max-width: 1600px)";
-$big: "(max-width: 1400px)";
+$max: "(min-width: 1600px)";
+$big: "(min-width: 1201px) and (max-width: 1599px)";
 $desktop: "(min-width: 992px) and (max-width: 1200px)";
 $tablet: "(min-width: 768px) and (max-width: 991px)";
 $smartphone: "(min-width: 577px) and (max-width: 768px)";
@@ -59,6 +59,7 @@ body {
 	@media #{$smartphone, $phone, $smallphone } {
    		position: relative;
    		background-image: none;
+   		padding: 0;
 	}
 	.header_navigation {
 		display: -ms-flexbox;
@@ -306,7 +307,7 @@ body {
    			margin: 30px 0;
 		}
 		@media #{$smallphone} {
-			margin: 50px 0;
+			margin: 30px 0;
    			font-size: 3em;
 		}
 	}
@@ -331,8 +332,8 @@ body {
    			margin: 20px 0 50px 0;
 		}
 		@media #{$smallphone} {
-   			font-size: 20px;
-   			margin-bottom: 40px;
+   			font-size: 0.8em;
+   			margin: 0 auto;
 		}
 	}
 }
@@ -469,11 +470,14 @@ body {
 				color: $pink;
 				font-size: 7vmin;
 				font-family: $font;
+				@media #{$big} {
+					font-size: 3em;
+				}
 				@media #{$smartphone} {
 					font-size: 4em;
 				}
 				@media #{$phone, $smallphone} {
-					font-size: 50px;
+					font-size: 3em;
 				}
 			}	
 			.about_number {
@@ -599,11 +603,13 @@ body {
 		margin-top: 4em;
 		flex-wrap: wrap;
 		background-color: transparent;
+		max-height: 600px;
 	}
 	@media #{$phone, $smallphone} {
    		flex-wrap: wrap;
    		margin-top: 2em;
    		background-color: $white;
+   		max-height: 300px;
 	}
 	.int_cell_one {
 		width: 25%;
@@ -656,6 +662,9 @@ body {
 			.int_title {
 				color: white;
 				font-size: 7vmin;
+				@media #{$big} {
+					font-size: 3em;
+				}
 				@media #{$smartphone} {
 					width: 100%;
 					font-size: 4em;
@@ -719,8 +728,9 @@ body {
    				height: 20%;
 			}
 			@media #{$smartphone, $phone, $smallphone} {
-			   	display: none;
-			   
+			   width: 100%;
+			   background-color: $white;
+   				color: $grey; 
 			}
 			.int_content {
 				text-align: center;
@@ -733,7 +743,6 @@ body {
 				}
 				@media #{$smartphone} {
 				   	width: 100%;
-				   	height: 50px;
 				   	margin: 0 auto;
 				}
 				@media #{$phone} {	
@@ -743,8 +752,8 @@ body {
 				}
 				@media #{$smallphone} {
 					width: 100%;
-					font-size: 20px;
-					margin: 0 auto;
+					font-size: 2em;
+					margin: 0 auto;	
 				}
 			}
 		}
@@ -757,13 +766,8 @@ body {
 				height: 80%;
 				bottom: 0;
 			}
-			@media #{$smartphone} {
-				width: 100%;
-				height: 100%;
-			}
-			@media #{$phone, $smallphone} {
-		   		width: 100%;
-		   		margin-top: 2em;
+			@media #{$smartphone, $phone, $smallphone} {
+				display: none;
 			}
 			.tree_row {
 				display: flex;
@@ -771,18 +775,12 @@ body {
 				@media #{$tablet} {
 					width: 100%;
 				}
-				@media #{$smartphone, $phone, $smallphone} {
-		   			flex-wrap: wrap;
-				}
 				.tree_cell {
 					border-top: 1px solid #000000;
 					width: 50%;
 					display: flex;
 					align-items: center;
 					justify-content: center;
-					@media #{$phone, $smallphone} {
-	   					width: 100%;
-					}
 					.tree_content {
 						text-align: center;
 						@media #{$smartphone} {
@@ -803,9 +801,6 @@ body {
 							@media #{$tablet} {
 						   		font-size: 24px;
 							}
-							@media #{$smartphone, $phone, $smallphone} {	
-								font-size: 20px;
-							}
 						}
 						.tree_article {
 							font-size: 4vmin;
@@ -823,15 +818,6 @@ body {
 							@media #{$tablet} {
 						   		font-size: 30px;
 							}
-							@media #{$smartphone} {	
-								font-size: 20px;
-							}
-							@media #{$phone} {	
-								font-size: 20px;
-							}
-							@media #{$smallphone} {	
-								font-size: 20px;
-							}
 						}
 						.tree_number {
 							font-size: 9vmin;
@@ -839,15 +825,6 @@ body {
 							font-weight: 500;
 							@media #{$tablet} {
 						   		font-size: 70px;
-							}
-							@media #{ $smartphone} {
-								font-size: 36px;
-								font-weight: 800;
-							}
-							@media #{$phone, $smallphone} {	
-								font-size: 36px;
-								font-weight: 800;
-								margin-bottom: 1em;
 							}
 						}
 					}
@@ -958,6 +935,9 @@ body {
 				font-size: 7vmin;
 				margin-bottom: 46px;
 				margin-left: -5px;
+				@media #{$big} {
+					font-size: 3em;
+				}
 				@media #{$desktop} {
    					font-size: 50px;
 				}
@@ -1101,6 +1081,8 @@ body {
 						display: flex;
 						align-items: center;
 						flex-wrap: wrap;
+						padding: 35px;
+				   		font-size: 90px;
 						@media #{$tablet} {
 				   			padding: 20px;
 						}
@@ -1177,7 +1159,7 @@ body {
 			width: 100%;
 	   		position: static;
 	   		background-image: none;
-			margin-top: 20em;
+			margin-top: 12em;
 		}
 		@media #{$phone, $smallphone} {
    			background-image: none;
@@ -1232,6 +1214,9 @@ body {
 				font-size: 7vmin;
 				margin-bottom: 46px;
 				margin-left: -5px;
+				@media #{$big} {
+					font-size: 3em;
+				}
 				@media #{$desktop} {
    					font-size: 50px;
 				}
@@ -1335,6 +1320,7 @@ body {
 					width: 25%;
 			   		flex-wrap: wrap;
 			   		border: solid 1px $white;
+			   		font-size: 1.5em;
 				}
 				&:hover {
 	    			border-bottom: solid 5px $pink;
