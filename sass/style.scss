@@ -1758,9 +1758,9 @@ body {
 
 .tree_cell_four {
 	background-color: $white;
+	border-right: 1px solid #000000;
 	@media #{$desktop, $tablet} {
-   		border-right: 1px solid #000000;
-   		border-bottom: 1px solid #000000;
+   	border-bottom: 1px solid #000000;
 	}
 	@media #{$smallphone} {
 		border-top: 1px solid $grey;

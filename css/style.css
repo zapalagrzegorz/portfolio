@@ -1610,10 +1610,10 @@ body {
       border-top: 1px solid #ffffff; } }
 
 .tree_cell_four {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  border-right: 1px solid #000000; }
   @media (min-width: 992px) and (max-width: 1200px), (min-width: 768px) and (max-width: 991px) {
     .tree_cell_four {
-      border-right: 1px solid #000000;
       border-bottom: 1px solid #000000; } }
   @media (max-width: 450px) {
     .tree_cell_four {
