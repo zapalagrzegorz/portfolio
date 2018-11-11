@@ -1052,8 +1052,8 @@ body {
                   overflow: auto; } }
               @media (max-width: 450px) {
                 .skills .skills_box .skills_cell_three .two_row .skills_know .icon_skills i {
-                  padding: 10px;
-                  font-size: 0.8em;
+                  padding: 16px;
+                  font-size: 0.5em;
                   overflow: auto; } }
       @media (max-width: 576px) {
         .skills .skills_box .skills_cell_three .second_row {
