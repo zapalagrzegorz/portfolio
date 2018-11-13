@@ -740,6 +740,9 @@ body {
 				.typewrite {
 					font-weight: 800;
 				}
+				@media #{$desktop} {
+					font-size: 1em;
+				}
 				@media #{$tablet} {
    					margin: 0;
 				}
