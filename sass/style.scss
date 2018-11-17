@@ -166,10 +166,19 @@ body {
 		background-image: url("../images/background.png");
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-size: 100%;
+		background-size: 75%;
 		background-position: center;
 		@media #{$tablet} {
 			height: 65vh;
+			background-size: 100%;
+		}
+		@media #{$smartphone} {
+			height: 65vh;
+			background-size: 80%;
+		}
+		@media #{$phone, $smallphone} {
+			height: 65vh;
+			background-size: 200%;
 		}
 		h1 {
 			font-family: $font01;
@@ -635,7 +644,7 @@ body {
 		 			 	}
 	 			 	}
 	 			 	.project_p {
-						height: 70%;
+						height: 100%;
 	 			 		width: 100%;
 						background-size: cover;
 						background-position: center;

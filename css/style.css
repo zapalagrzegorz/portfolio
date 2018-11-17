@@ -134,11 +134,20 @@ body {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 100%;
+    background-size: 75%;
     background-position: center; }
     @media (min-width: 768px) and (max-width: 991px) {
       .home .name {
-        height: 65vh; } }
+        height: 65vh;
+        background-size: 100%; } }
+    @media (min-width: 577px) and (max-width: 767px) {
+      .home .name {
+        height: 65vh;
+        background-size: 80%; } }
+    @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+      .home .name {
+        height: 65vh;
+        background-size: 200%; } }
     .home .name h1 {
       font-family: "Playfair Display", serif;
       font-size: 5em;
@@ -540,7 +549,7 @@ body {
                 font-size: 2em;
                 color: #1c1c1c; }
         .projects .row .projects_col .projects_box .project_p {
-          height: 70%;
+          height: 100%;
           width: 100%;
           background-size: cover;
           background-position: center;
