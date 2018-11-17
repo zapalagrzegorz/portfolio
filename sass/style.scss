@@ -536,6 +536,8 @@ body {
 	    	}
 	    	@media #{$smartphone} {
 	    		width: 25%;
+	    		border-top: solid 1px $white;
+	    		border-right: solid 1px white;
 			}
 
 	    	&:hover {
@@ -563,7 +565,7 @@ body {
 				height: 300px;
 			}
 			@media #{$desktop} {
-				width: 28vw;
+				width: 27vw;
 				height: 300px;
 			}
 			@media #{$tablet} {
@@ -571,7 +573,7 @@ body {
 				height: 250px;
 			}
 			@media #{$smartphone} {
-				width: 42vw;
+				width: 38vw;
 				height: 280px;
 			}
 			@media #{$phone, $smallphone} {
@@ -596,6 +598,9 @@ body {
 							text-align: center;
 							font-family: $font01;
 							font-size: 1.2em;
+							@media #{$desktop, $tablet} {
+								font-size: 1em;
+							}
 						}
 						.link_web {
 		 			 		width: 20%;

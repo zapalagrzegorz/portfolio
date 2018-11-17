@@ -457,7 +457,9 @@ body {
           font-size: 1em; } }
       @media (min-width: 577px) and (max-width: 767px) {
         .projects .my-buttons .project-btn {
-          width: 25%; } }
+          width: 25%;
+          border-top: solid 1px #ffffff;
+          border-right: solid 1px white; } }
       .projects .my-buttons .project-btn:hover {
         border-bottom: solid 5px #F9EAE9; }
       .projects .my-buttons .project-btn:focus {
@@ -480,7 +482,7 @@ body {
           height: 300px; } }
       @media (min-width: 992px) and (max-width: 1200px) {
         .projects .row .projects_col {
-          width: 28vw;
+          width: 27vw;
           height: 300px; } }
       @media (min-width: 768px) and (max-width: 991px) {
         .projects .row .projects_col {
@@ -488,7 +490,7 @@ body {
           height: 250px; } }
       @media (min-width: 577px) and (max-width: 767px) {
         .projects .row .projects_col {
-          width: 42vw;
+          width: 38vw;
           height: 280px; } }
       @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
         .projects .row .projects_col {
@@ -511,6 +513,9 @@ body {
             text-align: center;
             font-family: "Playfair Display", serif;
             font-size: 1.2em; }
+            @media (min-width: 992px) and (max-width: 1200px), (min-width: 768px) and (max-width: 991px) {
+              .projects .row .projects_col .projects_box .project_name .title {
+                font-size: 1em; } }
           .projects .row .projects_col .projects_box .project_name .link_web {
             width: 20%; }
             .projects .row .projects_col .projects_box .project_name .link_web .projects_link {
