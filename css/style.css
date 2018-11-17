@@ -130,7 +130,12 @@ body {
     padding: 0 10vw;
     align-items: flex-end;
     justify-content: center;
-    position: relative; }
+    position: relative;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100%;
+    background-position: center; }
     @media (min-width: 768px) and (max-width: 991px) {
       .home .name {
         height: 65vh; } }
@@ -172,29 +177,6 @@ body {
       @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
         .home .front h3 {
           font-size: 1em; } }
-  .home img {
-    width: 16%;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 50%;
-    box-shadow: -2px -2px 30px #757575; }
-    @media (min-width: 1201px) and (max-width: 1599px), (min-width: 992px) and (max-width: 1200px) {
-      .home img {
-        width: 18%; } }
-    @media (min-width: 992px) and (max-width: 1200px) {
-      .home img {
-        width: 30%;
-        top: 200px; } }
-    @media (min-width: 768px) and (max-width: 991px), (min-width: 577px) and (max-width: 767px) {
-      .home img {
-        width: 25%;
-        top: 16px; } }
-    @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
-      .home img {
-        width: 50%; } }
 
 /*-----------------------TOGGLER -------------------*/
 @media (min-width: 768px) and (max-width: 991px), (min-width: 577px) and (max-width: 767px), (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
