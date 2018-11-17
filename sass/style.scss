@@ -218,6 +218,9 @@ body {
 		border-radius: 50%;
 		box-shadow: -2px -2px 30px #757575;
 		@media #{$big, $desktop} {
+			width: 18%;
+		}
+		@media #{$desktop} {
 			width: 30%;
 			top: 200px;
 		}
