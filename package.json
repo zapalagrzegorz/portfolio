@@ -1,14 +1,22 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "persolnal portfolio\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[\u001b[\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001bnal portfolio",
+  "description": "portfolio",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wandakalinowska/portfolio.git"
+  },
+  "keywords": [
+    "[]"
+  ],
   "author": "wand",
   "license": "ISC",
-  "dependencies": {
-    "normalize.css": "^8.0.0"
-  }
+  "bugs": {
+    "url": "https://github.com/wandakalinowska/portfolio/issues"
+  },
+  "homepage": "https://github.com/wandakalinowska/portfolio#readme"
 }
