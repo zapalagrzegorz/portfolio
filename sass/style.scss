@@ -555,149 +555,146 @@ body {
 		flex-wrap: wrap;
 		justify-content: flex-start;
 		margin: 0 auto;
-		.projects_col {
-			width: 21vw;
-			height: 40vh;
-			margin: 0 auto;
-			margin: 8px;
-			@media #{$big} {
-				width: 28vw;
-				height: 300px;
+		.project_box {
+			margin: 30px;
+  			width: 40vw;
+  			@media #{$tablet} {
+	    		width: 37vw;
+	    	}
+	    	@media #{$smartphone} {
+	    		width: 35vw;
+	    	}
+	    	@media #{$phone, smallphone} {
+	    		width: 75vw;
+	    	}
+			.content {
+			  	width: 100%;
+			  	height: 400px;
+			 	display: flex;
+			 	 @media #{$tablet, $smartphone, $phone, $smallphone} {
+	    			flex-direction: column;
+	    		}
+				.project_01 {
+	  				background-image: url("../images/projects/project_01.jpg");
+	  			}
+	  			.project_03 {
+	  				background-image: url("../images/projects/project_03.jpg");
+	  			}
+	  			.project_04 {
+	  				background-image: url("../images/projects/project_04.jpg");
+	  			}
+	  			.project_05 {
+	  				background-image: url("../images/projects/project_05.jpg");
+	  			}
+	  			.project_06 {
+	  				background-image: url("../images/projects/project_06.jpg");
+	  			}
+	  			.project_07 {
+	  				background-image: url("../images/projects/project_07.jpg");
+	  			}
+	  			.project_08 {
+	  				background-image: url("../images/projects/project_08.jpg");
+	  			}
+	  			.project_09 {
+	  				background-image: url("../images/projects/project_09.jpg");
+	  			}
+	  			.project_10 {
+	  				background-image: url("../images/projects/project_10.jpg");
+	  			}
+	  			.project_11 {
+	  				background-image: url("../images/projects/project_11.jpg");
+	  			}
+			 	.project_link {
+    				width: 50%;
+				    background-size: 100%;
+				    background-repeat: no-repeat;
+				    display: flex;
+				    align-items: center;
+				    justify-content: space-around;
+				    background-position: center;
+				    @media #{$tablet, $smartphone, $phone, $smallphone} {
+	    				width: 100%;
+	    				height: 75%;
+	    			}
+				    .link {
+				    	width: 50%;
+      					height: 100%;
+        				position: relative;
+      					a {
+					        width: 100%;
+					        height: 100%;
+					        position: absolute;
+					        text-decoration: none;
+					        cursor: pointer;
+					        display: flex;
+					        align-items: center;
+					        justify-content: center;
+					        background-color: rgba(28,28,28, 0.2);
+					        transition: 1s;
+					        &:hover {
+					           background-color: rgba(28,28,28, 0.9);
+					        }
+					        i {
+					          font-size: 3em;
+					          color: white;
+					          padding: 10px;
+					          text-shadow: 2px 2px 5px $black;
+					        }
+					    }
+				    }
+				    .no_active {
+				    	background-color: rgba(28,28,28, 0.2);
+				    }
+				}
+				.project_desc {
+					width: 50%;
+				    color: $white;
+				    background-color: $black;
+				    display: flex;
+				    flex-direction: column;
+				    @media #{$tablet, $smartphone, $phone, $smallphone} {
+	    				width: 100%;
+	    				height: 25%;
+	    			}
+				    .project_title {
+				    	text-align: center;
+		  				font-weight: 100;
+		  				font-size: 1.8em;
+		  				padding: 0.5em 1em;
+		  				@media #{$desktop, $tablet} {
+	    					font-size: 1.5em;
+	    				}
+				    }
+				    .desc {
+				    	width: 100%;
+				    	font-family: $font02;
+				    	font-size: 1em;
+				    	letter-spacing: 0.3em;
+						line-height: 1.7em;
+				      	padding: 0 2em;
+				      	text-align: center;
+				       @media #{$tablet, $smartphone, $phone, $smallphone} {
+	    					display: none;
+	    				}
+				      	@media #{$big} {
+	    					font-size: 0.9em;
+	    					line-height: 1.5em;
+	    				}
+	    				@media #{$desktop, $tablet} {
+	    					font-size: 0.9em;
+	    					line-height: 1.4em;
+	    				}
+				    }
+				}
 			}
-			@media #{$desktop} {
-				width: 27vw;
-				height: 300px;
-			}
-			@media #{$tablet} {
-				width: 27vw;
-				height: 250px;
-			}
-			@media #{$smartphone} {
-				width: 38vw;
-				height: 280px;
-			}
-			@media #{$phone, $smallphone} {
-				width: 90vw;
-				height: 100px;
-			}
-
-			  	.projects_box {
-			  		border-bottom: solid 1px $black;
-	  				width: 100%;
-	  				height: 100%;
-	  				position: relative;
-	 			 	overflow: hidden;
-	 			 	display: flex;
-	 			 	flex-direction: column;
-	 			 	.project_name {
-	 			 		height: 30%;
-	 			 		width: 100%;
-	 			 		display: flex;
-	 			 		.title {
-							width: 60%;
-							text-align: center;
-							font-family: $font01;
-							font-size: 1.2em;
-							@media #{$desktop, $tablet} {
-								font-size: 1em;
-							}
-						}
-						.link_web {
-		 			 		width: 20%;
-	 			 			.projects_link {
-		 			 			width: 100%;
-		 			 			height: 100%;
-		 			 			display: flex;
-		 			 			align-items: center;
-		 			 			justify-content: center;
-		 			 			text-decoration: none;
-		 			 			transition: 1s;
-		 			 			@media #{$phone, $smallphone} {
-									height: 100px;
-								}
-		 			 			&:hover {
-		 			 				font-size: 1.4em;
-		 			 			}
-		 			 			i {
-		 			 				font-size: 2em;
-		 			 				color: $black;
-		 			 			}
-		 			 		}
-		 			 	}
-		 			 	.link_repo {
-		 			 		text-align: center;
-		 			 		width: 20%;
-	 			 			.projects_link {
-		 			 			width: 100%;
-		 			 			height: 100%;
-								text-decoration: none;
-		 			 			display: flex;
-		 			 			align-items: center;
-		 			 			justify-content: center;
-		 			 			transition: 1s;
-		 			 			@media #{$phone, $smallphone} {
-									height: 100px;
-								}
-								&:hover {
-		 			 				font-size: 1.4em;
-		 			 			}
-		 			 			i {
-		 			 				font-size: 2em;
-		 			 				color: $black;
-		 			 			}
-		 			 		}
-		 			 	}
-	 			 	}
-	 			 	.project_p {
-						height: 100%;
-	 			 		width: 100%;
-						background-size: cover;
-						background-position: center;
-						background-repeat: no-repeat;
-						@media #{$tablet} {
-							height: 50%;
-						}
-						@media #{$phone, $smallphone} {
-							display: none;
-						}
-	 			 	}
-	 			 	.project_01 {
-	  					background-image: url("../images/projects/project_01.jpg");
-	  				}
-	  				.project_02 {
-	  					background-image: url("../images/projects/project_02.jpg");
-	  				}
-	  				.project_03 {
-	  					background-image: url("../images/projects/project_03.jpg");
-	  				}
-	  				.project_04 {
-	  					background-image: url("../images/projects/project_04.jpg");
-	  				}
-	  				.project_05 {
-	  					background-image: url("../images/projects/project_05.jpg");
-	  				}
-	  				.project_06 {
-	  					background-image: url("../images/projects/project_06.jpg");
-	  				}
-	  				.project_07 {
-	  					background-image: url("../images/projects/project_07.jpg");
-	  				}
-	  				.project_08 {
-	  					background-image: url("../images/projects/project_08.jpg");
-	  				}
-	  				.project_09 {
-	  					background-image: url("../images/projects/project_09.jpg");
-	  				}
-	  				.project_10 {
-	  					background-image: url("../images/projects/project_10.jpg");
-	  				}
-	  				.project_11 {
-	  					background-image: url("../images/projects/project_11.jpg");
-	  				}
-	 			}
-	 		}
+		}
 	}
 }
+
+
+
+
+
 
 .contact {
 	height: 100%;
