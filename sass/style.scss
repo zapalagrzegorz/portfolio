@@ -536,8 +536,9 @@ body {
 	    	}
 	    	@media #{$smartphone} {
 	    		width: 25%;
-	    		border-top: solid 1px $white;
-	    		border-right: solid 1px white;
+	    		padding: 10px;
+	    		font-size: 1em;
+	    		border: solid 1px $white;
 			}
 
 	    	&:hover {
@@ -558,13 +559,16 @@ body {
 		.project_box {
 			margin: 30px;
   			width: 40vw;
+  			@media #{$desktop} {
+	    		width: 38vw;
+	    	}
   			@media #{$tablet} {
 	    		width: 37vw;
 	    	}
 	    	@media #{$smartphone} {
 	    		width: 35vw;
 	    	}
-	    	@media #{$phone, smallphone} {
+	    	@media #{$phone, $smallphone} {
 	    		width: 75vw;
 	    	}
 			.content {
@@ -573,6 +577,9 @@ body {
 			 	display: flex;
 			 	 @media #{$tablet, $smartphone, $phone, $smallphone} {
 	    			flex-direction: column;
+	    		}
+	    		@media #{$smartphone} {
+					height: 300px;
 	    		}
 				.project_01 {
 	  				background-image: url("../images/projects/project_01.jpg");
@@ -639,6 +646,9 @@ body {
 					          color: white;
 					          padding: 10px;
 					          text-shadow: 2px 2px 5px $black;
+					          @media #{$smartphone, $phone, $smallphone} {
+									font-size: 2em;
+	    						}
 					        }
 					    }
 				    }
@@ -664,6 +674,15 @@ body {
 		  				@media #{$desktop, $tablet} {
 	    					font-size: 1.5em;
 	    				}
+	    				@media #{$smartphone} {
+							font-size: 1.3em;
+							padding: 0;
+	    				}
+	    				@media #{$phone, $smallphone} {
+							font-size: 1.5em;
+							padding: 0;
+	    				}
+
 				    }
 				    .desc {
 				    	width: 100%;
@@ -680,7 +699,7 @@ body {
 	    					font-size: 0.9em;
 	    					line-height: 1.5em;
 	    				}
-	    				@media #{$desktop, $tablet} {
+	    				@media #{$desktop} {
 	    					font-size: 0.9em;
 	    					line-height: 1.4em;
 	    				}

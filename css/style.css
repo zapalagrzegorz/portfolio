@@ -458,8 +458,9 @@ body {
       @media (min-width: 577px) and (max-width: 767px) {
         .projects .my-buttons .project-btn {
           width: 25%;
-          border-top: solid 1px #ffffff;
-          border-right: solid 1px white; } }
+          padding: 10px;
+          font-size: 1em;
+          border: solid 1px #ffffff; } }
       .projects .my-buttons .project-btn:hover {
         border-bottom: solid 5px #F9EAE9; }
       .projects .my-buttons .project-btn:focus {
@@ -474,13 +475,16 @@ body {
     .projects .row .project_box {
       margin: 30px;
       width: 40vw; }
+      @media (min-width: 992px) and (max-width: 1200px) {
+        .projects .row .project_box {
+          width: 38vw; } }
       @media (min-width: 768px) and (max-width: 991px) {
         .projects .row .project_box {
           width: 37vw; } }
       @media (min-width: 577px) and (max-width: 767px) {
         .projects .row .project_box {
           width: 35vw; } }
-      @media (min-width: 321px) and (max-width: 576px), smallphone {
+      @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
         .projects .row .project_box {
           width: 75vw; } }
       .projects .row .project_box .content {
@@ -490,6 +494,9 @@ body {
         @media (min-width: 768px) and (max-width: 991px), (min-width: 577px) and (max-width: 767px), (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
           .projects .row .project_box .content {
             flex-direction: column; } }
+        @media (min-width: 577px) and (max-width: 767px) {
+          .projects .row .project_box .content {
+            height: 300px; } }
         .projects .row .project_box .content .project_01 {
           background-image: url("../images/projects/project_01.jpg"); }
         .projects .row .project_box .content .project_03 {
@@ -544,6 +551,9 @@ body {
                 color: white;
                 padding: 10px;
                 text-shadow: 2px 2px 5px #1c1c1c; }
+                @media (min-width: 577px) and (max-width: 767px), (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+                  .projects .row .project_box .content .project_link .link a i {
+                    font-size: 2em; } }
           .projects .row .project_box .content .project_link .no_active {
             background-color: rgba(28, 28, 28, 0.2); }
         .projects .row .project_box .content .project_desc {
@@ -564,6 +574,14 @@ body {
             @media (min-width: 992px) and (max-width: 1200px), (min-width: 768px) and (max-width: 991px) {
               .projects .row .project_box .content .project_desc .project_title {
                 font-size: 1.5em; } }
+            @media (min-width: 577px) and (max-width: 767px) {
+              .projects .row .project_box .content .project_desc .project_title {
+                font-size: 1.3em;
+                padding: 0; } }
+            @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+              .projects .row .project_box .content .project_desc .project_title {
+                font-size: 1.5em;
+                padding: 0; } }
           .projects .row .project_box .content .project_desc .desc {
             width: 100%;
             font-family: Georgia;
@@ -579,7 +597,7 @@ body {
               .projects .row .project_box .content .project_desc .desc {
                 font-size: 0.9em;
                 line-height: 1.5em; } }
-            @media (min-width: 992px) and (max-width: 1200px), (min-width: 768px) and (max-width: 991px) {
+            @media (min-width: 992px) and (max-width: 1200px) {
               .projects .row .project_box .content .project_desc .desc {
                 font-size: 0.9em;
                 line-height: 1.4em; } }
