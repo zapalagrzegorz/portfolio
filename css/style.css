@@ -645,23 +645,21 @@ body {
         padding: 0; } }
     .contact .contact_social .icon_social .icon_contact {
       color: #ffffff;
-      font-size: 4em;
-      transition: 1s; }
+      font-size: 4em; }
       @media (min-width: 577px) and (max-width: 767px) {
         .contact .contact_social .icon_social .icon_contact {
           font-size: 3em; } }
       @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
         .contact .contact_social .icon_social .icon_contact {
           font-size: 3em; } }
-      .contact .contact_social .icon_social .icon_contact:hover {
-        color: #F9EAE9;
-        font-size: 5em; }
-        @media (min-width: 577px) and (max-width: 767px) {
-          .contact .contact_social .icon_social .icon_contact:hover {
-            font-size: 3em; } }
-        @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
-          .contact .contact_social .icon_social .icon_contact:hover {
-            font-size: 3em; } }
+    .contact .contact_social .icon_social .google:hover {
+      color: #D54C3F; }
+    .contact .contact_social .icon_social .linkedin:hover {
+      color: #0270AD; }
+    .contact .contact_social .icon_social .github:hover {
+      color: #7C007C; }
+    .contact .contact_social .icon_social .cv:hover {
+      color: #F72268; }
 
 footer {
   width: 100%;

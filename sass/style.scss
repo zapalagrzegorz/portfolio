@@ -224,7 +224,6 @@ body {
 	}
 }
 
-
 /*-----------------------TOGGLER -------------------*/
 @media #{$tablet, $smartphone, $phone, $smallphone} {
 
@@ -713,11 +712,6 @@ body {
 	}
 }
 
-
-
-
-
-
 .contact {
 	height: 100%;
 	background-color: $black;
@@ -763,22 +757,31 @@ body {
 			.icon_contact {
 				color: $white;
 				font-size: 4em;
-				transition: 1s;
 				@media #{$smartphone} {
 					font-size: 3em;
 				}
 				@media #{$phone, $smallphone} {
 					font-size: 3em;
 				}
+			}
+			.google {
 				&:hover {
-					color: $pink;
-					font-size: 5em;
-					@media #{$smartphone} {
-						font-size: 3em;
-					}
-					@media #{$phone, $smallphone} {
-						font-size: 3em;
-					}	
+					color: #D54C3F;
+				}
+			}
+			.linkedin {
+				&:hover {
+					color: #0270AD;
+				}
+			}
+			.github {
+				&:hover {
+					color: #7C007C;
+				}
+			}
+			.cv {
+				&:hover {
+					color: #F72268;
 				}
 			}
 		}
