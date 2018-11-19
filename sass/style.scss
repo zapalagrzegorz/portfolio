@@ -129,7 +129,7 @@ body {
 							padding: 1.2em 0;
 							display: block;
 						 	color: $black;
-						 	font-size: 1.2em;
+						 	font-size: 1em;
 						}
 						@media #{$phone, $smallphone} {
 							padding: 1.2em 0;
@@ -166,7 +166,7 @@ body {
 		background-image: url("../images/background.png");
 		background-repeat: no-repeat;
 		background-size: cover;
-		background-size: 75%;
+		background-size: 50%;
 		background-position: center;
 		@media #{$tablet} {
 			height: 65vh;

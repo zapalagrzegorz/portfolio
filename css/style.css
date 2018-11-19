@@ -107,7 +107,7 @@ body {
                 padding: 1.2em 0;
                 display: block;
                 color: #1c1c1c;
-                font-size: 1.2em; } }
+                font-size: 1em; } }
             @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
               .home .nav_container .navigation_nav .nav_list .nav_item .nav_link {
                 padding: 1.2em 0;
@@ -134,7 +134,7 @@ body {
     background-image: url("../images/background.png");
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 75%;
+    background-size: 50%;
     background-position: center; }
     @media (min-width: 768px) and (max-width: 991px) {
       .home .name {
