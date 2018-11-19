@@ -559,7 +559,10 @@ body {
 		.project_box {
 			margin: 30px;
   			width: 40vw;
-  			@media #{$desktop} {
+  			@media #{$max} {
+	    		width: 35vw;
+	    	}
+  			@media #{$big, $desktop} {
 	    		width: 38vw;
 	    	}
   			@media #{$tablet} {

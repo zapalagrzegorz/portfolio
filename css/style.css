@@ -475,7 +475,10 @@ body {
     .projects .row .project_box {
       margin: 30px;
       width: 40vw; }
-      @media (min-width: 992px) and (max-width: 1200px) {
+      @media (min-width: 1600px) {
+        .projects .row .project_box {
+          width: 35vw; } }
+      @media (min-width: 1201px) and (max-width: 1599px), (min-width: 992px) and (max-width: 1200px) {
         .projects .row .project_box {
           width: 38vw; } }
       @media (min-width: 768px) and (max-width: 991px) {
