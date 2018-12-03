@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display");
-@import url("https://fonts.googleapis.com/css?family=KoHo");
 /*----------------RWD------------*/
 /*---------------------------------------*/
 * {
@@ -626,7 +625,7 @@ body {
       border-top: solid 2px #ffffff; }
   .contact .contact_social {
     padding: 10em;
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -643,23 +642,22 @@ body {
     @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
       .contact .contact_social {
         padding: 0; } }
-    .contact .contact_social .icon_social .icon_contact {
-      color: #ffffff;
-      font-size: 4em; }
-      @media (min-width: 577px) and (max-width: 767px) {
-        .contact .contact_social .icon_social .icon_contact {
-          font-size: 3em; } }
-      @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
-        .contact .contact_social .icon_social .icon_contact {
-          font-size: 3em; } }
-    .contact .contact_social .icon_social .google:hover {
-      color: #D54C3F; }
-    .contact .contact_social .icon_social .linkedin:hover {
-      color: #0270AD; }
-    .contact .contact_social .icon_social .github:hover {
-      color: #7C007C; }
-    .contact .contact_social .icon_social .cv:hover {
-      color: #F72268; }
+    .contact .contact_social .icon_social {
+      padding: 10px; }
+      .contact .contact_social .icon_social .icon_contact {
+        color: #D2D2D2;
+        font-size: 4em;
+        padding-bottom: 20px;
+        border-bottom: solid 1px #1c1c1c; }
+        @media (min-width: 577px) and (max-width: 767px) {
+          .contact .contact_social .icon_social .icon_contact {
+            font-size: 3em; } }
+        @media (min-width: 321px) and (max-width: 576px), (max-width: 320px) {
+          .contact .contact_social .icon_social .icon_contact {
+            font-size: 3em; } }
+        .contact .contact_social .icon_social .icon_contact:hover {
+          color: #ffffff;
+          border-bottom: solid 1px #ffffff; }
 
 footer {
   width: 100%;
