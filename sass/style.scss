@@ -758,6 +758,7 @@ body {
 				font-size: 4em;
 				padding-bottom: 20px;
 				border-bottom: solid 1px $black;
+				transition: 1s;
 				@media #{$smartphone} {
 					font-size: 3em;
 				}

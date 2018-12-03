@@ -648,7 +648,8 @@ body {
         color: #D2D2D2;
         font-size: 4em;
         padding-bottom: 20px;
-        border-bottom: solid 1px #1c1c1c; }
+        border-bottom: solid 1px #1c1c1c;
+        transition: 1s; }
         @media (min-width: 577px) and (max-width: 767px) {
           .contact .contact_social .icon_social .icon_contact {
             font-size: 3em; } }
