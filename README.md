@@ -1,5 +1,7 @@
 # PORTFOLIO
 
+## Strona-wizytówka z projektami 
+
 https://wandakalinowska.github.io/portfolio/
 
 ### Rozwiązania, technologie i narzędzia:
