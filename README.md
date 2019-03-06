@@ -2,7 +2,7 @@
 
 https://wandakalinowska.github.io/portfolio/
 
-### Rozwiązania, tchnologie i narzędzia:
+### Rozwiązania, technologie i narzędzia:
 
 * HTML 5
 * CSS 3
