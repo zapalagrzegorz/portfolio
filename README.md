@@ -6,6 +6,7 @@ https://wandakalinowska.github.io/portfolio/
 
 * HTML 5
 * CSS 3
+* JavaScript
 * jQuery
 * RWD
 * Sass
